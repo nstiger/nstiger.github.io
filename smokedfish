@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>送你一盒家乡熏鱼</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body {
+			background-image: url('path/to/background-image.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.card {
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px grey;
+			margin: 20px auto;
+			padding: 20px;
+			text-align: center;
+			max-width: 500px;
+		}
+		.card h2 {
+			font-size: 24px;
+			font-weight: bold;
+			margin: 10px 0px;
+		}
+		.card p {
+			font-size: 18px;
+			margin: 10px 0px;
+		}
+		.card img {
+			max-width: 100%;
+			margin: 10px 0px;
+		}
+		.button {
+			background-color: orange;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			cursor: pointer;
+			font-size: 18px;
+			margin: 20px auto;
+			padding: 10px;
+			display: block;
+		}
+		.button:hover {
+			background-color: darkorange;
+		}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<h2>送你一盒家乡熏鱼</h2>
+		<p>尊敬的Vincent：</p>
+		<p>感谢您一直以来的支持和关照，我带着这盒特产从资兴回来，想和你分享一下我家乡的美味。</p>
+		<p>虽然我不确定你是否喜欢吃熏鱼，但是我相信你一定能品尝出它的独特风味。</p>
+		<p>希望这份礼物能够表达我对你的感谢和祝福，也希望你能喜欢它。</p>
+		<img src="path/to/smoked-fish.jpg" alt="一盒家乡熏鱼">
+		<button class="button" onclick="location.href='http://example.com/hometown-introduction'">了解更多</button>
+	</div>
+</body>
+</html>
