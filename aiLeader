@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>人物</th>
+    <th>主要成就</th>
+  </tr>
+  <tr>
+    <td>Alan Turing</td>
+    <td>发明了图灵机和图灵测试，被认为是计算机科学和人工智能的先驱</td>
+  </tr>
+  <tr>
+    <td>Ross Quillian</td>
+    <td>提出了语义网络的概念，为自然语言理解和知识表示奠定了基础</td>
+  </tr>
+  <tr>
+    <td>Edward Feigenbaum</td>
+    <td>开发了第一个专家系统DENDRAL，被称为“知识工程之父”</td>
+  </tr>
+  <tr>
+    <td>IBM</td>
+    <td>创造了深蓝、沃森等多个具有里程碑意义的人工智能系统，展示了人工智能在下棋、问答等领域的强大能力</td>
+  </tr>
+  <tr>
+    <td>Marvin Minsky</td>
+    <td>提出了神经网络、框架理论、通用问题求解器等重要的人工智能理论和模型，被称为“人工智能之父”</td>
+  </tr>
+
+<table>
