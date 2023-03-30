@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Our Conversation</title>
+	<title id="title">Our Conversation</title>
+	<script>
+		var title = "我们的对话"; // 在这里设置对话标题
+		document.getElementById("title").innerText = title;
+	</script>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -39,7 +43,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Our Conversation</h1>
+		<h1 id="conversation-title">Our Conversation</h1>
 		<ul>
 			<li class="you">你好！</li>
 			<li class="me">你好！有什么可以帮到您的？</li>
