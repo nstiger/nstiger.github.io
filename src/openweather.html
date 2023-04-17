@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Report</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var api_key = "8c45d072322b04adf84e2cd9e5727ec8"; //替换为您的OpenWeatherMap API密钥
+			var city1 = "Shenzhen"; //第一个城市
+			var city2 = "Beijing"; //第二个城市
+ 			$("#city1").text(city1); //在页面上显示城市名称
+			$("#city2").text(city2);
+ 			//调用API并获取天气信息
+			$.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+ city1 +"&appid="+ api_key +"&units=metric", function(data){
+				//显示温度、湿度、气压
+				$("#temp1").text("Temperature: "+data.main.temp+"°C");
+				$("#humidity1").text("Humidity: "+data.main.humidity+"%");
+				$("#pressure1").text("Pressure: "+data.main.pressure+"hPa");
+			});
+ 			$.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+ city2 +"&appid="+ api_key +"&units=metric", function(data){
+				$("#temp2").text("Temperature: "+data.main.temp+"°C");
+				$("#humidity2").text("Humidity: "+data.main.humidity+"%");
+				$("#pressure2").text("Pressure: "+data.main.pressure+"hPa");
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Weather Report</h1>
+	<table>
+		<tr>
+			<th>City Name</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Pressure</th>
+		</tr>
+		<tr>
+			<td id="city1"></td>
+			<td id="temp1"></td>
+			<td id="humidity1"></td>
+			<td id="pressure1"></td>
+		</tr>
+		<tr>
+			<td id="city2"></td>
+			<td id="temp2"></td>
+			<td id="humidity2"></td>
+			<td id="pressure2"></td>
+		</tr>
+	</table>
+</body>
+</html>
