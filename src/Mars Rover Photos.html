@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NASA API Demo</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>NASA API Demo</h1>
+	<p>Click the button to see today's Astronomy Picture of the Day.</p>
+	<button id="btn">Get APOD</button>
+	<div id="apod"></div>
+
+	<script>
+	$(document).ready(function() {
+		$("#btn").click(function() {
+			var api_key = "";
+
+			// Get the API key from GitHub secrets
+			fetch("https://api.github.com/repos/nstiger/nstiger.github.io/actions/secrets/NASA_API_KEY")
+			  .then(response => response.json())
+			  .then(data => api_key = data.secret)
+			  .catch(error => console.error(error));
+
+			// Use the API key to call the NASA API
+			var url = "https://api.nasa.gov/planetary/apod?api_key=" + api_key;
+			$.get(url, function(data) {
+				var img_url = data.url;
+				var title = data.title;
+				var explanation = data.explanation;
+				$("#apod").html("<h2>" + title + "</h2><img src='" + img_url + "'><p>" + explanation + "</p>");
+			});
+		});
+	});
+	</script>
+</body>
+</html>
